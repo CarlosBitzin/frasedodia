@@ -33,7 +33,10 @@ class _HomeState extends State<Home> {
   void _gerarFrase(){
 
     var numeroSorteado = Random().nextInt( _frase.length );
-    print(numeroSorteado);
+    
+    setState(() {
+      _fraseGerada = _frase[numeroSorteado] ;
+    });
   }
   @override
   Widget build(BuildContext context) {
